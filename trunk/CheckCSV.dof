@@ -95,7 +95,7 @@ UnitOutputDir=
 PackageDLLOutputDir=
 PackageDCPOutputDir=
 SearchPath=
-Packages=
+Packages=vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;Diamond7;rxctl;rxbde;rxdb
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
@@ -110,10 +110,10 @@ ActiveLang=
 ProjectLang=
 RootDir=
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
-MinorVer=0
+MinorVer=1
 Release=0
 Build=0
 Debug=0
@@ -125,12 +125,15 @@ Locale=1033
 CodePage=1252
 [Version Info Keys]
 CompanyName=
-FileDescription=
-FileVersion=1.0.0.0
-InternalName=
-LegalCopyright=
+FileDescription=This Tool checks a CSV file for Errors
+FileVersion=1.1.0.0
+InternalName=CheckCSV
+LegalCopyright=CopyLeft
 LegalTrademarks=
-OriginalFilename=
-ProductName=
+OriginalFilename=CheckCSV
+ProductName=CheckCSV
 ProductVersion=1.0.0.0
 Comments=
+[HistoryLists\hlUnitAliases]
+Count=1
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;

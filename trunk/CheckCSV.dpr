@@ -1,22 +1,25 @@
 program CheckCSV;
 
 {$APPTYPE CONSOLE}
-
+{$R *.RES}
 uses
   SysUtils, Classes;
 
 procedure printHelp;
 begin
-  WriteLn(' This Tool checks a CSV file for Errors ');
-  WriteLn(' It assumes text qualifier = " ');
-  WriteLn('  ');
+  WriteLn('This Tool checks a CSV file for Errors ');
+  WriteLn('It assumes text qualifier = " ');
+  WriteLn(' ');
+  WriteLn(' CheckCSV.exe <FileName>');
+  WriteLn(' ');
+  WriteLn('Press ENTER to continue . . . ');
+  Readln;
 end;
 
 function fixCsvLine(csvLine: String): string;
 var
   i: integer;
 begin
-
   for i := 2 to length(csvLine) - 1 do
     if csvLine[i] = '"' then
       if not ((csvLine[i-1] = ',') or (csvLine[i+1] = ',')) then
@@ -66,8 +69,9 @@ begin
   if (outPutData.Count > 0) then
   begin
     correctFileData.SaveToFile(csvFile + '.fix.csv');
-    outPutData.SaveToFile(csvFile + '.txt');
-    WriteLn('File with potential errors created: ' + #13#10 +  csvFile + '.txt');
+    outPutData.SaveToFile(csvFile + '.err.txt');
+    WriteLn('File with potential errors created: ' + #13#10 +
+      csvFile + '.err.txt');
   end
   else
     WriteLn('No errors Found!');
